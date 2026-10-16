@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gen AI Institute | Learn. Create. Grow.</title>
+<meta name="description" content="Learn Amazon KDP, Digital Marketing and remote digital skills with Gen AI Institute. Explore courses and contact our team on WhatsApp.">
+<style>
+:root {
+  --purple: #9b72ed;
+  --deep: #7145cc;
+  --light: #f5efff;
+  --ink: #25213a;
+  --muted: #706b80;
+  --white: #fff;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Inter, Arial, sans-serif;
+  color: var(--ink);
+  background: white;
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.container { width: min(1120px, 91%); margin: auto; }
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(255,255,255,.95);
+  border-bottom: 1px solid #eee8f8;
+  backdrop-filter: blur(12px);
+}
+.nav {
+  min-height: 76px; display: flex; align-items: center;
+  justify-content: space-between; gap: 20px;
+}
+.logo { font-size: 22px; font-weight: 850; letter-spacing: -.8px; }
+.logo span { color: var(--deep); }
+nav { display: flex; gap: 25px; align-items: center; font-size: 14px; }
+nav a:hover { color: var(--deep); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; padding: 13px 21px; border-radius: 12px;
+  font-weight: 700; font-size: 14px; border: 0; cursor: pointer;
+  transition: .2s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.primary { color: white; background: var(--deep); box-shadow: 0 8px 22px #7145cc2b; }
+.secondary { color: var(--deep); background: white; border: 1px solid #ded0fb; }
+.hero {
+  overflow: hidden; padding: 88px 0 80px;
+  background: radial-gradient(ellipse at 85% 20%, #e5d7ff 0, transparent 36%),
+              linear-gradient(135deg,#fff 35%,#f8f3ff 100%);
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 52px; align-items: center; }
+.tag {
+  display: inline-block; color: var(--deep); background: #eee5ff;
+  padding: 7px 13px; border-radius: 99px; font-size: 12px;
+  font-weight: 800; letter-spacing: .5px; margin-bottom: 20px;
+}
+h1 { font-size: clamp(39px,5.2vw,64px); line-height: 1.08; letter-spacing: -2.6px; }
+h1 span { color: var(--deep); }
+.hero p { color: var(--muted); max-width: 510px; margin: 22px 0 28px; font-size: 17px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.trust { display: flex; flex-wrap: wrap; gap: 19px; margin-top: 27px; color: #625c73; font-size: 13px; }
+.trust span::before { content: "✓"; color: var(--deep); font-weight: 900; margin-right: 7px; }
+.hero-art {
+  min-height: 370px; border-radius: 32px; padding: 28px;
+  background: linear-gradient(145deg,#d9c4ff,#f4edff 62%,#fff);
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative;
+}
+.art-main {
+  background: rgba(255,255,255,.86); padding: 27px;
+  border-radius: 22px; box-shadow: 0 18px 45px #6540a91a;
+  position: relative; z-index: 1;
+}
+.art-icon { font-size: 38px; margin-bottom: 12px; }
+.art-main h3 { font-size: 24px; line-height: 1.25; }
+.art-main p { font-size: 14px; margin: 10px 0 18px; }
+.mini-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mini {
+  padding: 14px; background: #f4edff; border-radius: 13px;
+  font-size: 12px; font-weight: 700;
+}
+.mini b { display: block; font-size: 22px; color: var(--deep); }
+section { padding: 78px 0; }
+.section-head { text-align: center; max-width: 670px; margin: 0 auto 38px; }
+.eyebrow { color: var(--deep); font-size: 12px; font-weight: 850; letter-spacing: 1.5px; text-transform: uppercase; }
+h2 { font-size: clamp(29px,4vw,42px); line-height: 1.2; letter-spacing: -1.2px; margin: 10px 0 13px; }
+.section-head p, .muted { color: var(--muted); }
+.courses { background: #fcfaff; }
+.course-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.course {
+  background: white; padding: 25px; border: 1px solid #eee6fa;
+  border-radius: 21px; display: flex; flex-direction: column;
+  transition: .25s ease;
+}
+.course:hover { transform: translateY(-5px); box-shadow: 0 16px 35px #7044c817; }
+.course-icon {
+  height: 57px; width: 57px; display: grid; place-items: center;
+  font-size: 27px; background: var(--light); border-radius: 16px; margin-bottom: 19px;
+}
+.course h3 { font-size: 20px; margin-bottom: 9px; }
+.course p { color: var(--muted); font-size: 14px; flex: 1; margin-bottom: 20px; }
+.course .course-link { color: var(--deep); font-weight: 800; font-size: 14px; }
+.feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
+.feature-panel {
+  background: var(--light); border-radius: 27px; padding: 34px;
+}
+.feature-panel h3 { font-size: 27px; line-height: 1.25; margin: 12px 0; }
+.check-list { list-style: none; margin: 22px 0; }
+.check-list li { margin: 12px 0; color: #514b64; }
+.check-list li::before { content: "✓"; color: var(--deep); font-weight: 900; margin-right: 10px; }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; margin-top: 34px; }
+.step { border: 1px solid #eee6fa; border-radius: 18px; padding: 24px; }
+.step-num {
+  width: 38px; height: 38px; display: grid; place-items: center;
+  border-radius: 12px; color: var(--deep); background: var(--light);
+  font-weight: 900; margin-bottom: 13px;
+}
+.step h3 { font-size: 17px; margin-bottom: 6px; }
+.step p { color: var(--muted); font-size: 14px; }
+.faq { background: #fcfaff; }
+details { background: white; border: 1px solid #eee6fa; padding: 18px 20px; border-radius: 14px; margin: 11px 0; }
+summary { cursor: pointer; font-weight: 750; }
+details p { color: var(--muted); padding-top: 12px; font-size: 14px; }
+.contact-box {
+  background: linear-gradient(130deg,#7c4bd5,#a17aee);
+  color: white; padding: 48px; border-radius: 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 25px;
+}
+.contact-box h2 { margin-top: 0; }
+.contact-box p { color: #f1eaff; max-width: 570px; }
+.contact-box .btn { background: white; color: var(--deep); flex-shrink: 0; }
+footer { padding: 30px 0; border-top: 1px solid #eee8f8; }
+.footer-row { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.whatsapp {
+  position: fixed; bottom: 22px; right: 22px; z-index: 20;
+  background: #20b96b; color: white; border-radius: 50px;
+  padding: 14px 19px; font-size: 14px; font-weight: 800;
+  box-shadow: 0 8px 25px #0002;
+}
+@media(max-width:800px) {
+  .hero { padding: 60px 0; }
+  .hero-grid, .feature-grid { grid-template-columns: 1fr; gap: 30px; }
+  .hero-art { min-height: 320px; }
+  .course-grid { grid-template-columns: repeat(2,1fr); }
+  .steps { grid-template-columns: 1fr; }
+  nav { gap: 12px; }
+  nav a:not(.btn) { display: none; }
+  .contact-box { padding: 30px; flex-direction: column; align-items: flex-start; }
+}
+@media(max-width:520px) {
+  .course-grid { grid-template-columns: 1fr; }
+  h1 { letter-spacing: -1.6px; }
+  .hero-art { padding: 16px; }
+  .art-main { padding: 21px; }
+  .whatsapp { right: 12px; bottom: 12px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">Gen AI <span>Institute.</span></a>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#learning">Remote Learning</a>
+      <a href="#faq">FAQs</a>
+      <a class="btn primary" href="#contact">Join Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">LEARN ONLINE · BUILD YOUR FUTURE</span>
+      <h1>Learn Skills.<br>Unlock Your <span>Potential.</span></h1>
+      <p>Build practical digital skills with Gen AI Institute. Explore Amazon KDP, Digital Marketing and remote learning opportunities designed to help you take your next step.</p>
+      <div class="actions">
+        <a class="btn primary" href="#courses">Explore Courses ↗</a>
+        <a class="btn secondary" href="https://wa.me/923227333843?text=Assalam-o-Alaikum%2C%20I%20want%20to%20know%20about%20Gen%20AI%20Institute%20courses." target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+      <div class="trust">
+        <span>Remote learning</span><span>Practical skills</span><span>Course guidance</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="art-main">
+        <div class="art-icon">💡</div>
+        <h3>Your skills can open new doors.</h3>
+        <p>Learn, practise and explore the digital world with Gen AI Institute.</p>
+        <div class="mini-cards">
+          <div class="mini"><b>01</b>Amazon KDP</div>
+          <div class="mini"><b>02</b>Digital Marketing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Explore our learning paths</span>
+      <h2>Courses That Move You Forward</h2>
+      <p>Discover practical skills and choose a learning path that matches your goals.</p>
+    </div>
+    <div class="course-grid">
+      <article class="course">
+        <div class="course-icon">📚</div>
+        <h3>Amazon KDP</h3>
+        <p>Explore Kindle Direct Publishing, book formatting, cover basics, keyword research and the self-publishing process.</p>
+        <a class="course-link" href="https://wa.me/923227333843?text=I%20am%20interested%20in%20the%20Amazon%20KDP%20course." target="_blank" rel="noopener">Ask about this course ↗</a>
+      </article>
+      <article class="course">
+        <div class="course-icon">📈</div>
+        <h3>Digital Marketing</h3>
+        <p>Learn about SEO, social media marketing, content strategy, digital advertising and online campaign planning.</p>
+        <a class="course-link" href="https://wa.me/923227333843?text=I%20am%20interested%20in%20the%20Digital%20Marketing%20course." target="_blank" rel="noopener">Ask about this course ↗</a>
+      </article>
+      <article class="course">
+        <div class="course-icon">🤖</div>
+        <h3>AI Tools & Prompting</h3>
+        <p>Explore AI tools and prompt-writing techniques for research, content creation and everyday digital tasks.</p>
+        <a class="course-link" href="https://wa.me/923227333843?text=I%20want%20to%20ask%20about%20AI%20training." target="_blank" rel="noopener">Ask about this course ↗</a>
+      </article>
+    </div>
+    <p class="muted" style="text-align:center;font-size:12px;margin-top:20px">Ask our team which courses and upcoming batches are currently available.</p>
+  </div>
+</section>
+
+<section id="learning">
+  <div class="container feature-grid">
+    <div>
+      <span class="eyebrow">Learn from anywhere</span>
+      <h2>Remote Learning That Fits Your Life</h2>
+      <p class="muted">Build your skills from home with remote learning options. Contact our team to find out about class schedules, course format and enrolment.</p>
+      <ul class="check-list">
+        <li>Learn remotely from your preferred location</li>
+        <li>Explore practical, career-focused skills</li>
+        <li>Get course details before you enrol</li>
+        <li>Ask about schedules and available batches</li>
+      </ul>
+      <a class="btn primary" href="https://wa.me/923227333843?text=Please%20share%20your%20remote%20course%20details." target="_blank" rel="noopener">Ask About Remote Courses ↗</a>
+    </div>
+    <div class="feature-panel">
+      <span style="font-size:42px">🎯</span>
+      <h3>Start with a goal.<br>Grow with new skills.</h3>
+      <p class="muted">Whether you're exploring self-publishing or digital marketing, the first step is choosing the right learning path for you.</p>
+      <ul class="check-list">
+        <li>Choose a course</li>
+        <li>Discuss your learning goals</li>
+        <li>Confirm course details with our team</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Getting started</span>
+      <h2>Your Learning Journey Starts Here</h2>
+      <p>Three simple steps to find the right course for you.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><h3>Explore Courses</h3><p>Browse the available learning paths and choose a subject that interests you.</p></div>
+      <div class="step"><div class="step-num">02</div><h3>Contact Our Team</h3><p>Ask about course content, fees, schedule and remote learning options.</p></div>
+      <div class="step"><div class="step-num">03</div><h3>Plan Your Start</h3><p>Confirm the details and find out how to enrol in an available batch.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container" style="max-width:800px">
+    <div class="section-head">
+      <span class="eyebrow">Frequently asked questions</span>
+      <h2>Got Questions?</h2>
+      <p>Here are a few things you may want to know before getting started.</p>
+    </div>
+    <details><summary>Are remote courses available?</summary><p>Yes, remote learning is offered. Contact our team to confirm the current format, schedule and available courses.</p></details>
+    <details><summary>How can I learn about course fees?</summary><p>Message us on WhatsApp for the latest fee details and upcoming batches.</p></details>
+    <details><summary>How do I enrol?</summary><p>Contact our team, choose your preferred course and confirm the admission process.</p></details>
+    <details><summary>Which course should I choose?</summary><p>Tell our team about your interests and goals. They can help you explore the available options.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <span class="eyebrow" style="color:#f0e5ff">YOUR NEXT STEP</span>
+        <h2>Ready to Learn Something New?</h2>
+        <p>Contact Gen AI Institute to explore courses, ask questions and get admission guidance.</p>
+      </div>
+      <a class="btn" href="https://wa.me/923227333843?text=Assalam-o-Alaikum%2C%20I%20want%20course%20details%20from%20Gen%20AI%20Institute." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <a class="logo" href="#home">Gen AI <span>Institute.</span></a>
+    <span>Learn. Create. Grow.</span>
+    <span>© <span id="year">2026</span> Gen AI Institute. All rights reserved.</span>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/923227333843?text=Assalam-o-Alaikum%2C%20I%20want%20course%20details." target="_blank" rel="noopener">☏ WhatsApp</a>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
